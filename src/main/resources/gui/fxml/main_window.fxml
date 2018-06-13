@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="553.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controler.MainWindowController">
+    <children>
+        <VBox layoutX="9.0" layoutY="5.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <children>
+            <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" spacing="10.0">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="30.0" right="30.0" top="2.0" />
+               </VBox.margin>
+               <children>
+                      <TextField fx:id="urlTextField" prefHeight="25.0" prefWidth="345.0" promptText="URL" />
+                  <Button fx:id="updateButton" mnemonicParsing="false" onAction="#update" text="Download" />
+                  <Hyperlink fx:id="listHyperlink" text="Lista" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <VBox>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <children>
+                  <HBox prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <TextField fx:id="nameFilter" promptText="First name" />
+                        <TextField fx:id="lastNameFilter" promptText="Last name" />
+                        <CheckBox fx:id="dateFilterEnabled" mnemonicParsing="false" prefHeight="26.0" prefWidth="33.0" />
+                        <Button fx:id="youngerOlderFilter" mnemonicParsing="false" prefHeight="25.0" prefWidth="124.0" text="Younger than ( &gt; )" />
+                        <DatePicker fx:id="birthDateFilter" prefHeight="25.0" prefWidth="130.0" promptText="Birth date" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <TableView fx:id="patientsTable" prefHeight="412.0" prefWidth="570.0">
+                    <columns>
+                      <TableColumn fx:id="firstNameColumn" editable="false" prefWidth="173.0" resizable="false" text="First name" />
+                      <TableColumn fx:id="lastNameColumn" editable="false" minWidth="2.0" prefWidth="192.0" resizable="false" text="Last name" />
+                        <TableColumn fx:id="birthDateColumn" editable="false" minWidth="3.0" prefWidth="176.0" resizable="false" text="Birth date" />
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
