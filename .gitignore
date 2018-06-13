@@ -3,6 +3,8 @@
 # Compiled class file
 *.class
 
+.idea
+
 # Log file
 *.log
 
@@ -35,3 +37,4 @@ buildNumber.properties
 
 # Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
 !/.mvn/wrapper/maven-wrapper.jar
+/src/main/server/
